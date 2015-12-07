@@ -1,11 +1,11 @@
 import unittest
 
-import cleverbot
+import cleverbot3
 
 
 class Cleverbot(unittest.TestCase):
     def test_replay(self):
-        cbc = cleverbot.Cleverbot()
+        cbc = cleverbot3.Cleverbot()
         response = cbc.ask("Hi. How are you?")
         print(response)
         self.assertNotEqual(response, str())

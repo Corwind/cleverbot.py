@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import traceback
 import speech_recognition as sr
-import cleverbot
+import cleverbot3
 import sys
 import unittest
 
@@ -10,7 +10,7 @@ r = sr.Recognizer()
 with sr.Microphone() as source:  # audio source microphone ( computer default)
 
     def main():
-        bot = cleverbot.Cleverbot()
+        bot = cleverbot3.Cleverbot()
         while True:
             audio = r.listen(source)
             question = r.recognize(audio)

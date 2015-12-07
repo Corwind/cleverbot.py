@@ -1,12 +1,12 @@
 """Chat with Cleverbot in Python."""
 import traceback
 
-import cleverbot
+import cleverbot3
 
 
 def main():
     # instantiate a Cleverbot object
-    cleverbot_client = cleverbot.Cleverbot()
+    cleverbot_client = cleverbot3.Cleverbot()
 
     while True:
         question = input('>> You: ')

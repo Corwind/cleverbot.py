@@ -1,1 +1,1 @@
-from cleverbot.cleverbot import Cleverbot
+from cleverbot3.cleverbot import Cleverbot
