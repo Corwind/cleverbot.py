@@ -17,13 +17,13 @@ with sr.Microphone() as source:  # audio source microphone ( computer default)
             if question == 'exit' or question == 'Exit':
                 print('Goodbye')
                 sys.exit()
-            print('Me:' + question)
+            print(('Me:' + question))
             answer = bot.ask(question)
-            print('Cleverbot: {}'.format(answer))
+            print(('Cleverbot: {}'.format(answer)))
 
     if __name__ == '__main__':
         try:
             main()
         except Exception :
-            print(traceback.format_exc(err))
+            print((traceback.format_exc(err)))
 
