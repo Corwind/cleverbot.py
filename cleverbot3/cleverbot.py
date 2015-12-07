@@ -3,6 +3,8 @@ import http.cookiejar
 import hashlib
 import urllib.request, urllib.parse, urllib.error
 import urllib.request, urllib.error, urllib.parse
+from urllib.parse import unquote
+import html
 
 
 class Cleverbot:
@@ -110,7 +112,7 @@ class Cleverbot:
         # Add Cleverbot's reply to the conversation log
         self.conversation.append(parsed['answer'])
 
-        return parsed['answer']
+        return html.unescape(parsed['answer'])
 
     def _send(self):
         """POST the user's question and all required information to the 
@@ -151,8 +153,9 @@ class Cleverbot:
 
     def _parse(self):
         """Parses Cleverbot's response"""
+        resp = self.resp.decode('utf-8')
         parsed = [
-            item.split('\r') for item in self.resp.decode('utf-8').split('\r\r\r\r\r\r')[:-1]
+            item.split('\r') for item in resp.split('\r\r\r\r\r\r')[:-1]
         ]
         parsed_dict = {
             'answer': parsed[0][0],
