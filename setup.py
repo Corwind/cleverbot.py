@@ -1,15 +1,16 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name = 'cleverbot3',
     packages = ['cleverbot3'],
-    version = '0.1.5',
-    author = 'Rodney Folz',
-    author_email = 'folz@rodneyfolz.com',
-    url = 'https://github.com/folz/cleverbot.py',
+    version = '0.1.1',
+    author = 'Guillaume Doré',
+    author_email = 'guillaume@dore-net.fr',
+    url = 'https://github.com/Corwind/cleverbot3.py',
     description = 'An API for Cleverbot in Python 3',
+    license = 'Beerware',
     classifiers = [
-        'License :: OSI Approved :: BSD License',
+        'License :: Beerware',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent'
