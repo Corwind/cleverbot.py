@@ -7,23 +7,23 @@ import sys
 import unittest
 
 r = sr.Recognizer()
-with sr.Microphone() as source:  # audio source microphone ( computer default)
+with sr.Microphone() as source:  # audio source microphone (computer default)
 
     def main():
         bot = cleverbot3.Cleverbot()
         while True:
             audio = r.listen(source)
             question = r.recognize(audio)
-            if question == 'exit' or question == 'Exit':
+            if question.lower() == 'exit':
                 print('Goodbye')
                 sys.exit()
-            print(('Me:' + question))
+            print('Me: {}'.format(question))
             answer = bot.ask(question)
-            print(('Cleverbot: {}'.format(answer)))
+            print('Cleverbot: {}'.format(answer))
 
     if __name__ == '__main__':
         try:
             main()
-        except Exception :
+        except Exception:
             print((traceback.format_exc(err)))
 
